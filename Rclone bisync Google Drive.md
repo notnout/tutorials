@@ -81,7 +81,7 @@ Steps
 	- (also make sure you have the systemd config folder `mkdir -p ~/.config/systemd/user/`)
 2. First time run the command with --resync
 ```sh
-/usr/bin/rclone bisync drive: ~/sync
+/usr/bin/rclone bisync drive: ~/sync \
     -MvP \
     --create-empty-src-dirs \
     --compare size,modtime,checksum \
@@ -118,7 +118,7 @@ StartLimitBurst=1
 [Service]
 Type=oneshot
 ExecStart= \
-/usr/bin/rclone bisync drive: %h/sync
+/usr/bin/rclone bisync drive: %h/sync \
     -MvP \
     --create-empty-src-dirs \
     --compare size,modtime,checksum \
