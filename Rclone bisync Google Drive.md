@@ -143,6 +143,7 @@ Note: In the service we ensure that it runs when we are online and that it only 
 # Read and reload all unit configs. Required so it gets new config file state.
 systemctl --user daemon-reload 
 # Enable to run after reboot and also start immediately with "--now"
+systemctl --user enable --now rclone
 ```
 #### HELPFUL COMMANDS
 ```sh
